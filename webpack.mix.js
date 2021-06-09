@@ -83,7 +83,7 @@ mix.webpackConfig({
         //hot: true, inline: true, contentBase: __dirname
         disableHostCheck: false,
         watchContentBase: true,
-        host: "0.0.0.0",
+        host: "127.0.0.1",
         open: true
         //port: 8082,
     }
