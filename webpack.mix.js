@@ -15,21 +15,14 @@ mix.js("src/js/app.js", "dist/js");
 
 mix.combine(
     [
-        "src/vendor/dataTables/datatables.min.js",
-        "src/vendor/jqueryui/jquery-ui.min.js",
-        "src/vendor/sweetalert/sweetalert.min.js",
-        "src/vendor/validate/jquery.validate.min.js"
+     
     ],
     "dist/js/vendor.js"
 );
 
 mix.combine(
     [
-        "src/vendor/animate/animate.css",
-        "src/vendor/dataTables/datatables.min.css",
-        "src/vendor/font-awesome/css/font-awesome.min.css",
-        "src/vendor/jqueryui/jquery-ui.min.css",
-        //"src/vendor/sweetalert/sweetalert.css"
+        "src/vendor/font-awesome/css/font-awesome.min.css"
     ],
     "dist/css/vendor.css"
 ).options({
@@ -58,26 +51,6 @@ mix.webpackConfig({
             filename: "index.html",
             inject: false
         }),
-        new HtmlWebpackPlugin({
-            template: "ejs-compiled-loader!./src/about-us.ejs",
-            filename: "about-us.html",
-            inject: false
-        }),
-        new HtmlWebpackPlugin({
-            template: "ejs-compiled-loader!./src/contact-us.ejs",
-            filename: "contact-us.html",
-            inject: false
-        }),
-        new HtmlWebpackPlugin({
-            template: "ejs-compiled-loader!./src/datatable-demo.ejs",
-            filename: "datatable-demo.html",
-            inject: false
-        }),
-        new HtmlWebpackPlugin({
-            template: "ejs-compiled-loader!./src/font-awesome.ejs",
-            filename: "font-awesome.html",
-            inject: false
-        })
     ],
     devServer: {
         //hot: true, inline: true, contentBase: __dirname

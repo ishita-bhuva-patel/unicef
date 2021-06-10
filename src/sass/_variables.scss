@@ -7,3 +7,28 @@ $enable-rounded: false;
 // $input-focus-bg: #dcad1a;
 
 // $input-transition: border-color ease-in-out 1s, box-shadow ease-in-out 1s;
+
+$white:#fff;
+$black:#000;
+$c-primary:#6FAF9F;
+$c-lgray:#9D9D9D;
+$c-dgray:#292929;
+$f-primary:'Cabin';
+$f-secondary:'DM Serif Display';
+
+
+@mixin mixin-transition {
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+@mixin mixin-before-after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}

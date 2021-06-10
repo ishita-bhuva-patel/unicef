@@ -11,20 +11,9 @@
 
 @import "header";
 @import "index";
-@import "font-awesome";
-@import "about";
-@import "datatable";
-@import "contact-us";
-
-main {
-    .container {
-        min-height: 500px;
-    }
-}
 
 body {
-    font-family: 'Raleway';
-    background-color: green;
+    font-family: $f-primary;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale;
