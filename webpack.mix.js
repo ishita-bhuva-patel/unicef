@@ -15,14 +15,18 @@ mix.js("src/js/app.js", "dist/js");
 
 mix.combine(
     [
-     
+        "src/vendor/swiper/swiper.js",
+        "src/vendor/aos/aos.js",
+        "src/js/common.js",
     ],
     "dist/js/vendor.js"
 );
 
 mix.combine(
     [
-        "src/vendor/font-awesome/css/font-awesome.min.css"
+        "src/vendor/font-awesome/css/font-awesome.min.css",
+        "src/vendor/swiper/swiper.css",
+        "src/vendor/aos/aos.css",
     ],
     "dist/css/vendor.css"
 ).options({

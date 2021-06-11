@@ -32,3 +32,10 @@ $f-secondary:'DM Serif Display';
     bottom: 0;
     top: 0;
 }
+
+@mixin mixin-imgset {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+}

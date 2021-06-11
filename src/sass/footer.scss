@@ -1,0 +1,79 @@
+.uni-footer{
+    background-color: $c-dgray;
+    padding: 100px 0 45px;
+    &.uni-shape{
+        &:after,
+        &:before{
+            background-image: url(../images/bg-shape-white.svg);
+            opacity: 0.03;
+            z-index: 0;
+        }
+        &:before{
+            bottom: auto;
+            right: auto;
+            left: 80px;
+            top: -66px;
+        }
+        &:after{
+            top: auto;
+            left: auto;
+            right: -108px;
+        }
+    }
+    .uni-footer-logo{
+        width: 190px;
+    }
+    .uni-btn{
+        background-image: none;
+        background-color: $white;
+        color: $c-primary;
+        &:hover,
+        &:focus,
+        &:active {
+            opacity: 1;    
+            color: $white;
+            background-color: $c-primary;
+        }
+    }
+    .uni-social-icon{
+        margin-top: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        li{
+            margin-left: 25px;
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+        a{
+            i{
+                width: 25px;
+                height: 25px;
+                display: flex;
+                align-items: center;
+                svg{
+                    path{
+                        fill: $white;
+                        @include mixin-transition;
+                    }
+                }
+            }
+            &:hover{
+                background-color: transparent;
+                i{
+                    svg{
+                        path{
+                            fill: $c-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    p{
+        border-top: 1px solid rgba(255,255,255,0.2);
+        padding-top: 45px;
+        margin-top: 45px;
+    }
+}

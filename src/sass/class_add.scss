@@ -1,0 +1,74 @@
+.uni-loader{  
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; 
+    z-index: 4;
+    &:after{
+        @include mixin-before-after;
+        background-color: $c-primary;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+    }
+    &:before{
+        @include mixin-before-after;
+        background:url(../images/logo.png)no-repeat;
+        background-position: center center;
+        background-size: contain;
+        width: 250px;
+        height: auto;
+        z-index: 4;
+        margin: auto;
+        animation: fadein 2s linear infinite;
+        @keyframes fadein {
+            0%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 0.3;
+            }
+            100%{
+                opacity: 1;
+            }            
+        }
+    }
+    .uni-main{
+        display: none;
+    }
+    &.uni-loader-hide{
+        animation: heighthide 0.3s linear forwards;
+        @keyframes heighthide {
+            0%{
+              transform: translateY(0);
+            }
+            100%{
+                transform: translateY(-100%);
+            }            
+        }
+        .uni-main{
+            display: flex;
+        }
+    }
+}
+
+.uni-header-hide{
+    .uni-header{       
+        transform: translateY(-100%);
+        background-color: rgba(255,255,255,1);
+        box-shadow: 0px 10px 25px rgba(115, 161, 150, 0.2);
+    }
+}
+.uni-headere-show{      
+    .uni-header{       
+        background-color: rgba(255,255,255,1);
+        box-shadow: 0px 10px 25px rgba(111,175,159,0.2);
+    }
+}
+.uni-scroll-up-show{
+    .uni-scroll-up{
+        transform: translateY(0%);
+        bottom: 40px;
+    }
+}
