@@ -27,6 +27,9 @@ body {
     font-size:15px;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    @include media-breakpoint-down(lg){
+        font-size: 14px;       
+    }
 }
 h1,
 h2,
@@ -80,9 +83,16 @@ button {
     }
 }
 .container {
-   @include media-breakpoint-up(xl){
+    @include media-breakpoint-up-xxl{
+        max-width: 1440px;
+    }
+   @include media-breakpoint-up-xxxl{
         max-width: 1680px;
    }
+   @include media-breakpoint-up-xl{
+        max-width: 1350px;
+   }
+  
 }
 .uni-btn{
     padding: 11px 25px;
@@ -98,6 +108,19 @@ button {
     background-image: -moz-linear-gradient(to right, #6FAF9F 0%, #185949 51%, #6FAF9F 100%);
     background-image: -ms-linear-gradient(to right, #6FAF9F 0%, #185949 51%, #6FAF9F 100%);
     background-size: 200% auto!important;
+    @include media-breakpoint-down-xl{
+        font-size: 14px;
+        padding: 11px 20px;
+        min-width: 130px;
+    }
+    @include media-breakpoint-down(lg){
+        padding: 10px 15px;
+        min-width: 120px;
+    }
+    @include media-breakpoint-down(sm){
+        padding: 8px 15px;
+        font-size: 13px;
+    }
     &:hover,
     &:focus,
     &:active {
@@ -115,6 +138,36 @@ button {
     padding-right: 80px;
     display: inline-block;
     margin-bottom: 60px;
+    @include media-breakpoint-down-xxxl{
+        font-size: 46px;
+        line-height: 55px;
+        padding-right: 70px;
+        margin-bottom: 45px;
+    }
+    @include media-breakpoint-down-xxl{
+        font-size: 40px;
+        line-height: 45px;
+        padding-right: 60px;
+        margin-bottom: 35px;
+    }
+    @include media-breakpoint-down-xl{
+        font-size: 34px;
+        line-height: 42px;
+        padding-right: 58px;
+        margin-bottom: 30px;
+    }
+    @include media-breakpoint-down(lg){
+        font-size: 28px;
+        line-height: 38px;
+        padding-right: 55px;
+        margin-bottom: 25px;
+    }
+    @include media-breakpoint-down(sm){
+        font-size: 23px;
+        line-height: 31px;
+        padding-right: 50px;
+        margin-bottom: 20px;
+    }
     &:after{
         @include mixin-before-after;
         top: auto;
@@ -123,15 +176,40 @@ button {
         height: 4px;
         background-color: $c-dgray;
         bottom: 10px;
+        @include media-breakpoint-down-xxxl{
+            width: 45px;
+            height: 2px;
+        }
+        @include media-breakpoint-down(lg){
+            width: 35px;
+        }
     }
 }
 .uni-space{
     margin-bottom: 130px;
     margin-top: 130px;
+    @include media-breakpoint-down-xxxl{
+        margin-bottom: 80px;
+        margin-top: 80px;
+    }
+    @include media-breakpoint-down-xxl{
+        margin-bottom: 60px;
+        margin-top: 60px;
+    }
+    @include media-breakpoint-down(sm){
+        
+    margin-bottom: 40px;
+    margin-top: 40px;
+
+    }
 }
 p{
     margin-top: 10px;
     line-height: 25px;
+    @include media-breakpoint-down(sm){
+        margin-top: 6px;
+        line-height: 22px; 
+    }
 }
 .uni-read-link{
     font-size: 18px;
@@ -140,6 +218,9 @@ p{
     position: relative;
     text-transform: capitalize;
     display: inline-block;
+    @include media-breakpoint-down(lg){
+        font-size: 16px;
+    }
     &:after{
         @include mixin-before-after;
         left: auto;
@@ -151,6 +232,16 @@ p{
         height: 30px;
         right: -45px;
         @include mixin-transition;
+        @include media-breakpoint-down-xxl{
+            width: 27px;
+            height: 27px;
+            right: -40px;
+        }
+        @include media-breakpoint-down(lg){
+            width: 22px;
+            height: 22px;
+            right: -30px;
+        }
     }
     &:hover,
     &:focus,
@@ -159,6 +250,12 @@ p{
         text-decoration: underline;
         &:after{
             right: -55px;
+            @include media-breakpoint-down-xxl{               
+                right: -50px;
+            }
+            @include media-breakpoint-down(lg){
+                right: -40px;
+            }
         }
     }
 }
@@ -174,6 +271,10 @@ p{
         height: 216px;
         z-index: -1;
         opacity: 0.05;
+        @include media-breakpoint-down(sm){
+            width: 130px;
+            height: 130px;
+        }
     }
 }
 .uni-scroll-up{
@@ -190,4 +291,14 @@ p{
     z-index: 1;
     @include mixin-transition;
     transform: translateY(100%);
+    @include media-breakpoint-down-xl{
+        width: 40px;
+        height: 40px;
+        right: 20px;
+    }
+    @include media-breakpoint-down(sm){
+        width: 30px;
+        height: 30px;
+        background-size: 10px 10px;
+    }
 }

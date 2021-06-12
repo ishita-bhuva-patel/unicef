@@ -1,6 +1,18 @@
 .uni-footer{
     background-color: $c-dgray;
     padding: 100px 0 45px;
+    @include media-breakpoint-down-xxxl{
+      padding: 60px 0 30px;
+    } 
+    @include media-breakpoint-down-xl{
+        padding: 40px 0 25px;
+    }
+    @include media-breakpoint-down(lg){
+        padding: 30px 0 20px;
+       }
+       @include media-breakpoint-down(sm){
+        padding: 30px 0 15px;
+       }
     &.uni-shape{
         &:after,
         &:before{
@@ -22,6 +34,12 @@
     }
     .uni-footer-logo{
         width: 190px;
+        @include media-breakpoint-down-xl{
+            width: 150px;
+        }
+        @include media-breakpoint-down(xs){
+            width: 110px;
+        }
     }
     .uni-btn{
         background-image: none;
@@ -40,8 +58,17 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        @include media-breakpoint-down-xl{
+           margin-top: 20px;
+        }
+        @include media-breakpoint-down(xs){
+            justify-content: flex-start;
+        }
         li{
             margin-left: 25px;
+            @include media-breakpoint-down(md){
+                margin-left: 15px;
+            }
             &:first-child{
                 margin-left: 0;
             }
@@ -52,6 +79,10 @@
                 height: 25px;
                 display: flex;
                 align-items: center;
+                @include media-breakpoint-down-xl{
+                  width: 18px;
+                  height: 18px;
+                 }
                 svg{
                     path{
                         fill: $white;
@@ -75,5 +106,21 @@
         border-top: 1px solid rgba(255,255,255,0.2);
         padding-top: 45px;
         margin-top: 45px;
+        @include media-breakpoint-down-xxxl{
+            padding-top: 30px;
+            margin-top: 30px;
+          } 
+          @include media-breakpoint-down-xl{
+            padding-top: 25px;
+            margin-top: 25px;
+           }
+           @include media-breakpoint-down(lg){
+            padding-top: 20px;
+            margin-top: 20px;
+           }
+           @include media-breakpoint-down(sm){
+            padding-top: 10px;
+            margin-top: 10px;
+           }
     }
 }

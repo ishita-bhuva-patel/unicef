@@ -25,7 +25,7 @@ $(window).on('load', function() {
         $(".uni-loader").addClass('uni-loader-hide'); 
         setTimeout(function(){  
             AOS.init({
-                duration: 1500,
+                duration: 1000,
                 once: true,
             });  
         }, 200);

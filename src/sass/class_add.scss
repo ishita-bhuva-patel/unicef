@@ -22,6 +22,12 @@
         z-index: 4;
         margin: auto;
         animation: fadein 2s linear infinite;
+        @include media-breakpoint-down(md){
+            width: 200px;
+        }
+        @include media-breakpoint-down(xs){
+            width: 150px;
+        }
         @keyframes fadein {
             0%{
                 opacity: 1;
@@ -70,5 +76,12 @@
     .uni-scroll-up{
         transform: translateY(0%);
         bottom: 40px;
+        @include media-breakpoint-down-xl{
+            bottom: 20px;
+            
+        }
+        @include media-breakpoint-down(xs){
+            bottom: 60px;
+        }
     }
 }
